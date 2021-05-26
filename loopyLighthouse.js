@@ -1,12 +1,14 @@
-let i = 100;
-while (i <= 200) {
-  let out = '';
-  if (i % 3 === 0) {
-    out += 'Loopy';
+const loopyLighthouse = (range, multiples, words) => {
+  let i = range[0];
+  while (i <= range[1]) {
+    let out = '';
+    if (i % multiples[0] === 0) {
+      out += words[0];
+    }
+    if (i % multiples[1] === 0) {
+      out += words[1];
+    }
+    console.log(out || i);
+    i++;
   }
-  if (i % 4 === 0) {
-    out += 'Lighthouse';
-  }
-  console.log(out || i);
-  i++;
-}
+};
