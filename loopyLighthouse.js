@@ -1,6 +1,5 @@
 const loopyLighthouse = (range, multiples, words) => {
-  let i = range[0];
-  while (i <= range[1]) {
+  for (let i = range[0]; i <= range[1]; i++) {
     let out = '';
     if (i % multiples[0] === 0) {
       out += words[0];
@@ -9,6 +8,5 @@ const loopyLighthouse = (range, multiples, words) => {
       out += words[1];
     }
     console.log(out || i);
-    i++;
   }
 };
